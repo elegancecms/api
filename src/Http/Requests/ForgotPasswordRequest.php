@@ -1,0 +1,25 @@
+<?php
+
+namespace EleganceCMS\Api\Http\Requests;
+
+use EleganceCMS\Support\Http\Requests\Request;
+
+class ForgotPasswordRequest extends Request
+{
+    public function rules(): array
+    {
+        return [
+            'email' => ['required', 'string', 'email', 'min:6', 'max:60'],
+        ];
+    }
+
+    public function bodyParameters(): array
+    {
+        return [
+            'email' => [
+                'description' => 'The email address of the user',
+                'example' => 'john.smith@example.com',
+            ],
+        ];
+    }
+}

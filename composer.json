@@ -1,0 +1,45 @@
+{
+    "name": "elegancecms/api",
+    "description": "API package for Elegance CMS",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "elegancecms",
+        "Elegance CMS",
+        "elegancecms platform",
+        "elegancecms api"
+    ],
+    "homepage": "https://elegancecms.com",
+    "authors": [
+        {
+            "name": "EleganceCMS Technologies",
+            "email": "contact@elegancecms.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EleganceCMS\\Api\\": "src"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "knuckleswtf/scribe": "^5.0",
+        "laravel/pint": "^1.5.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EleganceCMS\\Api\\Providers\\ApiServiceProvider"
+            ],
+            "aliases": {
+                "ApiHelper": "EleganceCMS\\Api\\Facades\\ApiHelper"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
